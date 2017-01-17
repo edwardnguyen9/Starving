@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { App } from './app';
+import { AppBar, NoteCard } from './ui';
+import { Main, NotesContainer } from './containers';
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
@@ -9,7 +12,12 @@ import { FirstComponentComponent } from './first-component/first-component.compo
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent
+    FirstComponentComponent,
+    App,
+    Main,
+    AppBar,
+    NoteCard,
+    NotesContainer
   ],
   imports: [
     BrowserModule,
@@ -17,6 +25,6 @@ import { FirstComponentComponent } from './first-component/first-component.compo
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, App]
 })
 export class AppModule { }
